@@ -2,29 +2,45 @@
 //  LeeCode160.swift
 //  LeeCode
 //
-//  Created by fly on 2020/4/9.
+//  Created by 王俊杰 on 2020/4/10.
 //  Copyright © 2020 JJWOW. All rights reserved.
 //
 
 import Cocoa
 
+/*
+ 编写一个程序，找到两个单链表相交的起始节点。
+ */
+//思路:一张链表循环结束接着去循环另一张表,如果两者链表相交,两张链表头出发的两个点会在交点相遇
 class LeeCode160: NSObject {
     func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
-        var head1 = headA
-        
-        while head1?.next != nil {
-            head1 = head1?.next
+        if headA == nil || headB == nil {
+            return nil
         }
-        head1?.next = headA
-        
-        var p1 = headB, p2 = headB
-        while p2 != nil && p2?.next != nil {
-            p1 = p1?.next
-            p2 = p2?.next?.next
-            if p1?.val == p2?.val{
-                return true
+        var low = headA , fast = headB, bLow = false, bFast = false
+        while low != nil && fast != nil {
+            if gg(obj: low!) == gg(obj: fast!) {
+                return low
+            }
+            if low?.next == nil && bLow == false {
+                low = headB
+                bLow = true
+            }
+            else{
+                low = low?.next
+            }
+            if fast?.next == nil && bFast == false {
+                fast = headA
+                bFast = true
+            }
+            else{
+                fast = fast?.next
             }
         }
-        return false
+        return low
+    }
+    //获取没有继承NSObject的类的内存地址
+    func gg(obj:AnyObject) -> String {
+        return String(describing: Unmanaged<AnyObject>.passUnretained(obj).toOpaque())
     }
 }
