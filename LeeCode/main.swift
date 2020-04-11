@@ -10,12 +10,13 @@ import Foundation
 
 print("Hello, World!")
 
-
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
+var node = ListNode.init(1)
+node.next = ListNode.init(1)
+node.next?.next = ListNode.init(1)
+node.next?.next?.next = ListNode.init(3)
+node.next?.next?.next?.next = ListNode.init(3)
+var n = LeeCode83.deleteDuplicates(node)
+while n != nil {
+    print(n?.val)
+    n = n?.next
 }
