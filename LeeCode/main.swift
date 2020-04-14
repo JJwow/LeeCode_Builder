@@ -11,11 +11,11 @@ import Foundation
 print("Hello, World!")
 
 var node = ListNode.init(1)
-node.next = ListNode.init(1)
-node.next?.next = ListNode.init(1)
-node.next?.next?.next = ListNode.init(3)
-node.next?.next?.next?.next = ListNode.init(3)
-var n = LeeCode83.deleteDuplicates(node)
+node.next = ListNode.init(2)
+node.next?.next = ListNode.init(3)
+node.next?.next?.next = ListNode.init(4)
+node.next?.next?.next?.next = ListNode.init(5)
+var n = LeeCode328.oddEvenListBetter(node)
 while n != nil {
     print(n?.val)
     n = n?.next
