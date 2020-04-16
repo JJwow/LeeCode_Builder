@@ -10,51 +10,39 @@ import Cocoa
 
 class LeeCode445: NSObject {
     class func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        var list1 = l1, list2 = l2, arr1 = [ListNode](), arr2 = [ListNode]()
+        var list1 = l1, list2 = l2, arr1 = [Int](), arr2 = [Int]()
         while list1 != nil {
-            arr1.append(list1!)
+            arr1.append(list1!.val)
             list1 = list1?.next
         }
         while list2 != nil {
-            arr2.append(list2!)
+            arr2.append(list2!.val)
             list2 = list2?.next
         }
-        var carry = 0, result:ListNode?
+        var carry = 0, result:ListNode?, left = 0, right = 0
         
-        while arr1.count != 0 || arr2.count != 0 {
+        while arr1.count != 0 || arr2.count != 0 || carry != 0 {
             if arr1.count == 0 {
-                if carry != 0 {
-                    arr1.append(ListNode.init(carry))
-                    carry = 0
-                }
-                else{
-                    arr2.last?.next = result
-                    return l2
-                }
+                left = 0
             }
-            else if arr2.count == 0{
-                if carry != 0 {
-                    arr2.append(ListNode.init(carry))
-                    carry = 0
-                }
-                else{
-                    arr1.last?.next = result
-                    return l1
-                }
+            else{
+                left = arr1.last!
+                _ = arr1.popLast()
             }
-            let sum = ((arr1.last!.val) + (arr2.last!.val))%10
-            let rr = ListNode.init(sum + carry)
-            carry = ((arr1.last!.val) + (arr2.last!.val))/10
-            rr.next = result
-            result = rr
-            _ = arr1.popLast()
-            _ = arr2.popLast()
-        }
-        if carry != 0{
-            let rr = ListNode.init(carry)
+            if arr2.count == 0 {
+                right = 0
+            }
+            else{
+                right = arr2.last!
+                _ = arr2.popLast()
+            }
+            let sum = (left + right + carry)%10
+            let rr = ListNode.init(sum)
+            carry = (left + right + carry)/10
             rr.next = result
             result = rr
         }
+        
         return result
     }
 }
