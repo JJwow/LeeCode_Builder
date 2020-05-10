@@ -18,6 +18,7 @@
 		1A876881243F258C00A8CEEE /* LeeCode206.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A876880243F258C00A8CEEE /* LeeCode206.swift */; };
 		84054C53243CBECD00FD840C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84054C52243CBECD00FD840C /* main.swift */; };
 		84054C5A243CBEDD00FD840C /* LeeCode21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84054C59243CBEDD00FD840C /* LeeCode21.swift */; };
+		8430449A244C3E410005EF5D /* LeeCode725.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84304499244C3E410005EF5D /* LeeCode725.swift */; };
 		848D07E92445F3A800878422 /* LeeCode328.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D07E82445F3A800878422 /* LeeCode328.swift */; };
 		848D07EB2447D0F600878422 /* LeeCode445.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D07EA2447D0F600878422 /* LeeCode445.swift */; };
 		84BD25AC2441721F008FEB5E /* LeeCode876.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD25AB2441721F008FEB5E /* LeeCode876.swift */; };
@@ -52,6 +53,7 @@
 		84054C4F243CBECD00FD840C /* LeeCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeeCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		84054C52243CBECD00FD840C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		84054C59243CBEDD00FD840C /* LeeCode21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeCode21.swift; sourceTree = "<group>"; };
+		84304499244C3E410005EF5D /* LeeCode725.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeCode725.swift; sourceTree = "<group>"; };
 		848D07E82445F3A800878422 /* LeeCode328.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeCode328.swift; sourceTree = "<group>"; };
 		848D07EA2447D0F600878422 /* LeeCode445.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeCode445.swift; sourceTree = "<group>"; };
 		84BD25AB2441721F008FEB5E /* LeeCode876.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeCode876.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				848D07E82445F3A800878422 /* LeeCode328.swift */,
 				848D07EA2447D0F600878422 /* LeeCode445.swift */,
 				84BD25AB2441721F008FEB5E /* LeeCode876.swift */,
+				84304499244C3E410005EF5D /* LeeCode725.swift */,
 			);
 			path = ListNode;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				84BF1186243F5CE700A35AE4 /* LeeCode141.swift in Sources */,
 				1A802645243D769500B0A56A /* LeeCode2.swift in Sources */,
+				8430449A244C3E410005EF5D /* LeeCode725.swift in Sources */,
 				848D07EB2447D0F600878422 /* LeeCode445.swift in Sources */,
 				84BF1182243F4DD200A35AE4 /* LeeCode83.swift in Sources */,
 				1A30BDBF24407F2900904F6E /* LeeCode237.swift in Sources */,
